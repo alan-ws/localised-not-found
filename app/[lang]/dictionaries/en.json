@@ -1,0 +1,11 @@
+{
+    "products": {
+        "cart": "Add to Cart"
+    },
+    "home": {
+        "message": "hello"
+    },
+    "notfound": {
+        "message": "goodbye"
+    }
+}

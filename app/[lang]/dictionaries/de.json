@@ -1,0 +1,11 @@
+{
+    "products": {
+        "cart": "Toevoegen aan Winkelwagen"
+    },
+    "home": {
+        "message": "hallo"
+    },
+    "notfound": {
+        "message": "verabschiedung"
+    }
+}
