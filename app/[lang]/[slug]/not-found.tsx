@@ -1,19 +1,18 @@
 'use client'
 
-import { useParams, usePathname } from "next/navigation";
+import { useParams } from "next/navigation";
 import { Suspense } from "react";
 
 export default function NotFound() {
     const param = useParams()
-    const path = usePathname()
 
     return <div>
         <h1>404</h1>
-        <Suspense>
+        <Suspense fallback="loading">
             {
-                // make use of param or path to get the data
-                // fetch request here, not server action
-                // cache the results 
+                fetch("https://localised-not-found.vercel.app/api/translations", { method: 'POST', body: JSON.stringify({ locale: param.lang }) })
+                    .then(res => res.json())
+                    .then(json => json.message)
             }
         </Suspense>
     </div>
